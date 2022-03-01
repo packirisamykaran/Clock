@@ -1,0 +1,77 @@
+
+
+.alarm{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    
+    
+
+}
+
+.alarm-list{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+.alarm-add-btn{
+    position: absolute;
+    bottom: 70px;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    
+}
+.alarm-add-btn>button{
+    background-color: black;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    
+}
+
+
+/* Alarm setter */
+#alarm-setter{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 1rem;
+    row-gap: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    background-color: white;
+    color: black;
+
+    z-index: -1;
+}
+
+.alarm-setter-cross{
+    align-self: flex-end;
+    color: white;
+    background-color: black;
+
+}
+
+.alarm-set-btn{
+    background-color: white;
+    font-size: 1.5rem;
+}
+
+input{
+    font-size: 1.5rem;
+}
+
+
+/* alarm setter */

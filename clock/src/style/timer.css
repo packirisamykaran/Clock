@@ -1,0 +1,45 @@
+.timer-btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+  }
+.timer-btns>*{
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 25px;
+    padding: 2rem;
+    font-weight: 900;
+    width: 100%;
+  
+  }
+
+  .timer-display{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 2rem ;
+  }
+
+
+.timer-timings-container>*{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.timer-ajt-btn{
+  border: 1px solid white;
+  font-size: 3rem;
+  background-color: black;
+  color: white;
+  width:4rem
+}
+
+.timer-timings-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+

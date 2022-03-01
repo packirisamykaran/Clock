@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.app{
+  color: white;
+  max-width: 500px;
+  margin-inline: auto;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100wh;
+
+}
+
+.heading{
+  align-self: flex-start;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.application{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+
+.navbar{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px 1px solid white;
+  box-shadow:-2px 0px 10px white ;
+  z-index: 1;
+  background-color: black;
+}
+
+.navbar>*{
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  
+}
+
+.navbar>*:active{
+  background-color: white;
+}
+
+img{
+  width: 25px;
+  filter: invert(1);
+  
+}
+
+
+
+
+
+
+
+/* Stopwatch */
+
+
+
+/* Stopwatch */
+
+
+/* timer */
+
+
+
+
+/* timer */

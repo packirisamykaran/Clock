@@ -5,7 +5,9 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 80%;
+    margin: 0 auto ;
+
     
     
 
@@ -82,8 +84,7 @@ input{
     z-index: 0;
     height: 100vh;
     background-color: black;
-    width: 60%;
-    margin: 0 auto;
+    width: 80%;
     row-gap: 1.5rem;
 }
 

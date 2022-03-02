@@ -1,18 +1,10 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
   background-color: black;
   box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 
 .app{
@@ -50,10 +42,9 @@ code {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  border-top: 1px 1px solid white;
-  box-shadow:-2px 0px 10px white ;
   z-index: 1;
   background-color: black;
+  
 }
 
 .navbar>*{

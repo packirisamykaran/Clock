@@ -7,6 +7,7 @@ import Clock from './components/clock';
 import Alarm from './components/alarm';
 import Timer from './components/timer';
 import Stopwatch from './components/stopwatch';
+import {Provider} from 'react-redux'
 
 function Navbar(){
 
@@ -48,9 +49,11 @@ function Layout(){
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Navbar />
-    </BrowserRouter>
+    <Provider>
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

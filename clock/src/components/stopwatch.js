@@ -1,47 +1,26 @@
-import React, {useState, useEffect} from "react"
 import '../style/stopwatch.css'
+import { counting, timing } from "../slices/stopwatchSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { increment, reset, startstop } from "../slices/stopwatchSlice";
 
 
 export default function Stopwatch(){
 
-    const [sec, setSec] = useState(0);
-    const [running, setRunning] = useState(false)
+
+    const count = useSelector(timing);
+    const dispatch = useDispatch();
+
+
     
-    const start_stop = ()=> setRunning(!running); 
-    
-    const reset = ()=>{
-        setSec(0)
-    }
-
-    useEffect(()=>{
-        
-        
-        let timer=null;
-        if(running){
-            timer=setTimeout(() => {
-                setSec((sec)=>sec+0.01)
-            }, 10);
-        }
-         else{
-            clearTimeout(timer);
-         }  
-         
-         return()=>{
-             clearTimeout(timer)
-         }
-
-         
-    }, [sec, running])
-
-
+  
     return(
         <div className="stopwatch">
             <div className="stopwatch-display">
-               <div className="stopwatch-hours">{Math.floor(sec/60/60)}</div> <span>:</span> <div className="stopwatch-minutes">{Math.floor(sec/60)}</div> <span>:</span> <div className="stopwatch-seconds">{(sec%60).toFixed(2)}</div>
+               <div className="stopwatch-hours">{Math.floor(count/60/60)}</div> <span>:</span> <div className="stopwatch-minutes">{Math.floor(count/60)}</div> <span>:</span> <div className="stopwatch-seconds">{(count%60).toFixed(2)}</div>
             </div>
             <div className="stopwatch-btns">
-                <button className="stopwatch-start_stop" onClick={start_stop}>Start/Stop</button>
-                <button className="stopwatch-reset" onClick={reset}>Reset</button>
+                <button className="stopwatch-start_stop" onClick={()=>dispatch(startstop()) }>Start/Stop</button>
+                <button className="stopwatch-reset" onClick={()=>dispatch(reset()) }>Reset</button>
             </div>
         </div>
     )

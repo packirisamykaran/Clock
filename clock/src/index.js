@@ -8,6 +8,11 @@ import Alarm from './components/alarm';
 import Timer from './components/timer';
 import Stopwatch from './components/stopwatch';
 import {Provider} from 'react-redux'
+import store from './components/store';
+import { counting} from "./slices/stopwatchSlice";
+import { increment } from "./slices/stopwatchSlice";
+import { useSelector, useDispatch } from "react-redux";
+
 
 function Navbar(){
 
@@ -27,6 +32,41 @@ function Navbar(){
 
 
 function Layout(){
+
+
+  //Clock
+  
+
+  //Clock
+
+
+  // Stopwatch
+  const countingstatus = useSelector(counting)
+  const dispatch = useDispatch();
+
+  const getcountstatus = ()=> countingstatus;
+
+  let stopwatchInterval = null;
+  if(countingstatus){
+    stopwatchInterval = setInterval(() => {
+        if(getcountstatus()){
+          dispatch(increment());
+          
+         }else{
+          clearInterval(stopwatchInterval)
+         }
+          
+          
+          
+      }, 10);
+  }
+  console.log(countingstatus)
+
+  // Stopwatch
+
+
+
+  
   
   return(
     <div className='app'>
@@ -49,7 +89,7 @@ function Layout(){
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
+    <Provider store={store}>
       <BrowserRouter>
         <Navbar />
       </BrowserRouter>

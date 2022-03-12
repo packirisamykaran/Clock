@@ -2,21 +2,24 @@ import React, {useState, useEffect} from "react";
 import '../style/clock.css'
 
 export default function Clock(){
+
+    let date = new Date()
+
     
-    const [hr, setHr] = useState(0);
-    const [min, setMin] = useState(0);
-    const [sec, setSec] = useState(0);
-    const [midday, setMidday] = useState(0);
+    const [hr, setHr] = useState(((date.getHours() + 11) % 12 + 1));
+    const [min, setMin] = useState(date.getMinutes());
+    const [sec, setSec] = useState(date.getSeconds());
+    const [midday, setMidday] = useState("PM");
 
     const inc = 1000;
 
     
     function clock() {
-      const date = new Date();
+        date = new Date();
     
       const hours = ((date.getHours() + 11) % 12 + 1);
       const minutes = date.getMinutes();
-      const seconds = date.getSeconds();
+      const seconds =date.getSeconds();
 
 
       

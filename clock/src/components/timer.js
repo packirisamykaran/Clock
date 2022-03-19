@@ -87,7 +87,7 @@ export default function Timer(){
 
     return(
         <div className="timer">
-            {/* total:{Math.floor(totaltime)} */}
+            {/*    */}
             <div className="timer-display">
                 <div className="timer-timings-container">
                     <button className="timer-ajt-btn" onClick={()=>incr(setHr)}>+</button>

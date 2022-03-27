@@ -1,3 +1,9 @@
+.timer{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
 .timer-btns{
     width: 100%;
     display: flex;
